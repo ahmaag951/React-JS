@@ -1,0 +1,41 @@
+React js is a javascript library for building fast and interactive user interfaces
+it was developed at facebook at 2011, and currently it's the most popular javascript library for building user interfaces
+the heart of all React applications are the components 
+the component is a piece of user interface 
+so when we use react we are building independent isolated reusable components and then compose them to build complex user interface
+the main component in react is the app component, and its chidren components
+so the react app is a tree of components exactly like the angular 2
+the component is implemented as a javascript class that has state and render method
+the state is the data that we want to display when the component is rendered and the render method is used to describe what the ui should look like
+the output of the render is a react element which is a simple plain javascript object that maps to a dom element
+react element =======> dom element
+it's not a real dom element, it's just a plain javascript object that represents the dom element in memory
+so react keeps a lightweight representation of the dom in memory which is called the 'virtual dom'
+when we change the stat of a component, we get a new react element, react will then compare this element and its chidren with the previous one
+it will figure out what has changed and will update a part of the real dom to keep it in sync with the virtual dom 
+this is why the library is called react, because when the state changes React reacts to the state changed and updates the dom
+angular is a complete framework but react is a (view)library, it only take care of rendering the view, it's very small api to learn
+so when building apps with react we need to use other libraries for things like routing or calling http services and so on
+---------------------Installation-----------------
+npm i -g create-react-app => you don't have to use a specefic version but this to keep along with the course
+we use this package to create a new react app 
+there are two vs code extensions make using react easier 
+1. Simple React Snippets
+2. Prettier - Code formatter
+you can turn on the format on save option from file => prefrences => format on save
+-------------------Create first app----------------
+in the cmd => create-react-app hello-world-react
+this will install a development server, webpack, babel (for combiling javascript code)
+to run the application => npm run start, this will launch the develpment server on port 3000 and open the browser
+the public folder is for the public assets of our application and index.html
+it has a div with id root, this is where our react application is going to appear, this is the container of our react application
+the src folder contains the components, app component is responsible for rendering the home page that you see on port 3000 home page
+in the app component the render method returns a div, this is neither a string nor html, it's called JSX (javascript xml)
+we use jsx to describe how the ui will look like
+to make the jsx code work, we have to pass it to babel (which is a modern javascript combiler), 
+so babel will take this jsx syntax and convert it to plain javascript code that browser can understan 
+to see this in action go to babeljs.io/repl website, you can write jsx code and it will convert it to plain javascript code and vice verse
+the index.js is the entry component for our app 
+---------------------Hello world from scrach---------------
+delete every things from src folder and create your first application from scrach
+create file index.js and see the code inside it in folder hello-world-react
